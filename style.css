@@ -1,0 +1,343 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 覆蓋全部 */
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 共用語法 */
+
+.d-f{
+    display: flex;
+}
+
+.c-w{
+    color: white;
+}
+
+/* nav bar */
+
+.header{
+    max-width: 100%;
+    background-color: #AA0601;
+}
+
+.top{
+    max-width: 1290px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.list{
+    display: flex;
+}
+
+.list ul{
+    display: flex;
+    width: 526px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top ul li a{
+    color: white;
+}
+
+
+.logo{
+    display: inline-block;
+    width: 80px;
+    height: 45px;
+}
+
+
+
+/* Tablet RWD */
+
+@media (max-width:992px) {
+    .top{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .list{
+        width: 70%;
+    }
+}
+
+/* Phone RWD */
+
+@media (max-width:767px) {
+    .top{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .logo{
+       margin-top: 12px;
+       margin-bottom: 12px;
+       margin-left: 15px;
+    }
+
+    .list{
+        width: 100%;
+    }
+
+    .list ul{
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .list ul li{
+        width: 50%;
+        border: 1px solid white;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+    }
+}
+
+
+/* footer */
+
+.footer{
+    background-color: #AA0601;
+    margin-top: 200px;
+}
+
+.bottom{
+    max-width: 1290px; ;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 32px;
+}
+
+/* 聯絡方式跟社群媒體 */
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contact_left{
+    flex-direction: column;
+}
+
+.contact_left ul{
+    justify-content: space-between;
+}
+
+.contact_left ul li{
+    padding-right: 48px;
+}
+
+.contact_phone{
+    max-width: 100%;
+}
+.contact_mail{
+    max-width: 100%;
+}
+
+.contact_left ul li a{
+    color: white;
+}
+
+.contact_right{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_right img{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+}
+
+/* 白色線條 */
+
+.line{
+    max-width: 100%;
+    height: 1px;
+    border: solid 1px white;
+}
+
+/* Contact Phone */
+
+.contact_phone{
+    margin-top: 36px;
+    margin-bottom: 8px;
+}
+
+.material-icons-outlined{
+    color: white;
+    width: 36px;
+    height: 36px;
+}
+
+/* Contact Mail */
+
+.contact_mail{
+    margin-bottom: 32px;
+}
+
+/* Right */
+
+.rights{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: space-between;
+}
+
+.rights ul{
+    width: 174px;
+    justify-content: space-between;
+}
+
+.rights ul li{
+    font-size: 12px;
+}
+
+
+/* Tablet RWD */
+
+@media (max-width:992px){
+    
+    .bottom{
+        padding-right: 36px;
+        padding-left: 36px;
+    }
+
+    .contact_left ul li{
+        padding-right: 35px;
+    }
+
+    .contact_phone p{
+        font-size: 36px;
+    }   
+    
+    .contact_mail p{
+        font-size: 36px;
+    }
+
+    .contact_right{
+        width: 20%;
+    }
+
+}
+
+
+/* Phone RWD */
+
+    @media (max-width:767px) {
+
+        .bottom{
+            padding: 0px;
+            margin-top: 24px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .contact_left ul{   
+            display: none;
+        }
+
+        .contact_right{
+            margin-top: 24px;
+        }
+
+        .contact_phone p{
+            font-size: 16px;
+        }
+
+        .contact_mail p{
+            font-size: 16px;
+        }
+
+        .contact_right img{
+            width: 24px;
+            height: 24px;
+        }
+
+        .rights{
+            flex-wrap: wrap;
+        }
+
+        .rights p{
+            width: 100%;
+            display: inline-block;
+            font-size: 24px;
+        }
+
+        .rights ul{
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .rights ul li{
+            width: 100%;
+            font-size: 24px;
+            padding-top: 8px;
+        }
+    }
