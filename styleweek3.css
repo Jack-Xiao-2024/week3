@@ -123,6 +123,9 @@ a{
     .list{
         width: 70%;
     }
+    .list ul {
+        width: 100%;
+    }
 }
 
 /* Phone RWD */
